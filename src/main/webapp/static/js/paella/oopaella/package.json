@@ -23,7 +23,7 @@
 		"webpack-dev-server": "^4.7.3"
 	},
 	"dependencies": {
-		"paella-basic-plugins": "^1.23.0",
+		"paella-basic-plugins": "^1.44.0",
 		"paella-core": "^1.23.1"
 	}
 }
