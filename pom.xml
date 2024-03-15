@@ -66,7 +66,7 @@
 		<attach.classes>false</attach.classes>
 		
 		<!-- Dependency versions -->
-		<org.springframework.version>6.1.0</org.springframework.version>
+		<org.springframework.version>6.1.5</org.springframework.version>
 		<org.hibernate.version>6.2.13.Final</org.hibernate.version>
 		<org.hibernate.validator.version>8.0.1.Final</org.hibernate.validator.version>
 		<org.glassfish.jaxb.runtime>4.0.4</org.glassfish.jaxb.runtime>
@@ -108,14 +108,14 @@
 	    <test.env.db.oracle.pass>olat00002</test.env.db.oracle.pass>
 	    <test.env.db.oracle.host>localhost</test.env.db.oracle.host>
 	    <test.env.db.oracle.host.port>1521</test.env.db.oracle.host.port>
-	    <test.env.msgraph.app.id></test.env.msgraph.app.id>
-	    <test.env.msgraph.app.secret></test.env.msgraph.app.secret>
-	    <test.env.msgraph.app.tenant></test.env.msgraph.app.tenant>
-	    <test.env.msgraph.teams.producer></test.env.msgraph.teams.producer>
+	    <test.env.msgraph.app.id/>
+	    <test.env.msgraph.app.secret/>
+	    <test.env.msgraph.app.tenant/>
+	    <test.env.msgraph.teams.producer/>
 	    <test.env.instance.id>myolat</test.env.instance.id>
 	    <test.env.webdriver.browser>chrome</test.env.webdriver.browser>
-	    <test.env.webdriver.chrome.driver></test.env.webdriver.chrome.driver>
-	    <test.env.webdriver.gecko.driver></test.env.webdriver.gecko.driver>
+	    <test.env.webdriver.chrome.driver/>
+	    <test.env.webdriver.gecko.driver/>
 	    <skipTests>true</skipTests>
 		<skipSeleniumTests>false</skipSeleniumTests>
 	</properties>
@@ -1414,8 +1414,7 @@
 						</goals>
 						<configuration>
 							<target name="copy notice.txt to web project">      
-								<copy file="${project.basedir}/NOTICE.TXT"
-									tofile="${project.build.outputDirectory}/NOTICE.TXT"/>
+								<copy file="${project.basedir}/NOTICE.TXT" tofile="${project.build.outputDirectory}/NOTICE.TXT"/>
 							</target>
 						</configuration>                       
 					</execution>
@@ -1427,9 +1426,9 @@
 						</goals>
 						<configuration>
 							<target>
-								<mkdir dir="${project.build.directory}/downloads" />
-								<get src="https://nexus.openolat.org/nexus/content/repositories/openolat/org/apache/tomcat/apache-tomcat-arq/10.1.1/apache-tomcat-arq-10.1.1.zip" dest="${project.build.directory}/downloads" verbose="true" skipexisting="true" />
-								<unzip src="${project.build.directory}/downloads/apache-tomcat-arq-10.1.1.zip" dest="${project.build.directory}/arq-apache-tomcat-10.1.1" />
+								<mkdir dir="${project.build.directory}/downloads"/>
+								<get src="https://nexus.openolat.org/nexus/content/repositories/openolat/org/apache/tomcat/apache-tomcat-arq/10.1.1/apache-tomcat-arq-10.1.1.zip" dest="${project.build.directory}/downloads" verbose="true" skipexisting="true"/>
+								<unzip src="${project.build.directory}/downloads/apache-tomcat-arq-10.1.1.zip" dest="${project.build.directory}/arq-apache-tomcat-10.1.1"/>
 							</target>
 						</configuration>
 					</execution> 
@@ -1567,7 +1566,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -1580,7 +1579,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
